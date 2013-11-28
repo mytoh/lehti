@@ -1,0 +1,10 @@
+#!/usr/bin/env gosh
+
+(use lehti.cli)
+
+(define (main args)
+  (run args))
+
+;; Local Variables:
+;; mode: scheme
+;; End:
