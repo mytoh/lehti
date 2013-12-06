@@ -16,6 +16,7 @@
        args
        (lambda (p)
          (display (string-append "deinstall " p))
+         (newline)
          (deinstall-package p))))
 
     (define (deinstall-package package)
