@@ -29,6 +29,8 @@
            (deinstall rest))
           ("commands"
            (commands rest))
+          ("bundle"
+           (bundle rest))
           ("projects"
            (projects rest)))))
 
