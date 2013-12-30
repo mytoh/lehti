@@ -1,6 +1,7 @@
 
 (define-module lehti.command.install
-  (export install)
+  (export install
+          install-package)
 
   ;;; imports
   (use file.util)
