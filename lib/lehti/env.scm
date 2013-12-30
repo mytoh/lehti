@@ -7,6 +7,7 @@
           *lehti-cache-directory*
           *lehti-bin-directory*
           *lehti-projects-repository-directory*
+          *lehti-bundle-file*
           *projects-repository*)
 
   ;; ** imports
@@ -44,5 +45,7 @@
     (define *projects-repository*
       (make-parameter "git://github.com/mytoh/lehti-projects"))
 
+    (define *lehti-bundle-file*
+      (make-parameter "Lehfile"))
 
     ))
