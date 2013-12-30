@@ -9,8 +9,10 @@
           environment
           setup
           search
+          bundle
           commands)
   (use lehti.command.install)
+  (use lehti.command.bundle)
   (use lehti.command.deinstall)
   (use lehti.command.clean)
   (use lehti.command.specification)
