@@ -46,6 +46,6 @@
       (make-parameter "git://github.com/mytoh/lehti-projects"))
 
     (define *lehti-bundle-file*
-      (make-parameter "Lehfile"))
+      (make-parameter "Lehtifile"))
 
     ))
