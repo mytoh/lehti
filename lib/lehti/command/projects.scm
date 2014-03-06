@@ -1,15 +1,14 @@
 
-(define-module lehti.command.projects
-
-  (export
-    projects)
-  ;; ** import
-  (use srfi-1)
-  (use file.util)
-  (use lehti.env)
-  (use lehti.base)
-  (use lehti.util)
-
+(define-library (lehti command projects)
+    (export
+      projects)
+  (import (scheme base)
+          (gauche base)
+          (srfi-1)
+          (file util)
+          (lehti env)
+          (lehti base)
+          (lehti util))
   (begin
 
     (define (remove-dot-directory lst)

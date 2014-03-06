@@ -1,16 +1,18 @@
 
-(define-module lehti.command.search
+(define-library (lehti command search)
 
-  (export
-    search)
-  ;; ** import
-  (use srfi-1)
-  (use srfi-13)
-  (use file.util)
-  (use util.match)
-  (use lehti.env)
-  (use lehti.base)
-  (use lehti.util)
+    (export
+      search)
+  (import (scheme base)
+          (scheme write)
+          (gauche base)
+          (srfi-1)
+          (srfi-13)
+          (file util)
+          (util match)
+          (lehti env)
+          (lehti base)
+          (lehti util))
 
   (begin
 
@@ -42,12 +44,12 @@
 
     (define (search args)
       (match args
-        (()
-         (all-packages))
-        (else
-            (if (file-exists? (*lehti-projects-repository-directory*))
-              (search-package (car args))
-              (display "please install lehti")))))
+             (()
+              (all-packages))
+             (else
+                 (if (file-exists? (*lehti-projects-repository-directory*))
+                   (search-package (car args))
+                   (display "please install lehti")))))
 
 
     ))
