@@ -1,12 +1,12 @@
 
-(define-module lehti.command.list
-  (export
-    list-packages)
-  ;; ** import
-  (use file.util)
-  (use lehti.base)
-  (use lehti.lehspec)
-  (use lehti.env)
+(define-library (lehti command list)
+    (export list-packages)
+  (import (scheme base)
+          (gauche base)
+          (file util)
+          (lehti base)
+          (lehti lehspec)
+          (lehti env))
 
   (begin
 
@@ -17,6 +17,6 @@
         (map
             (lambda (path)
               (path-sans-extension path))
-          (directory-list (build-path (*lehti-directory* ) "dist" ) :children? #t))))
+          (directory-list (build-path (*lehti-directory* ) "dist") :children? #t))))
 
     ))
