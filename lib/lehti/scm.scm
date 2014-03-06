@@ -1,8 +1,9 @@
-(define-module lehti.scm
-  (export
-    url-is-git?
-    git-url-basename)
-  (use file.util)
+(define-library (lehti scm)
+    (export
+      url-is-git?
+      git-url-basename)
+  (import (scheme base)
+          (file util))
 
   (begin
 

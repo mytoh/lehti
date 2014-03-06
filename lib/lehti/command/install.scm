@@ -1,15 +1,16 @@
 
-(define-module lehti.command.install
-  (export install
-          install-package)
-
-  ;;; imports
-  (use file.util)
-  (use gauche.process)
-  (use lehti.env)
-  (use lehti.lehspec)
-  (use lehti.util)
-  (use lehti.scm)
+(define-library (lehti command install)
+    (export install
+            install-package)
+  (import (scheme base)
+          (scheme write)
+          (gauche base)
+          (file util)
+          (gauche process)
+          (lehti env)
+          (lehti lehspec)
+          (lehti util)
+          (lehti scm))
 
   ;;; code
   (begin

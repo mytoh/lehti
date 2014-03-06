@@ -1,19 +1,20 @@
 
-(define-module lehti.env
+(define-library (lehti env)
 
-  ;; ** exports
-  (export *lehti-dist-directory*
-          *lehti-directory*
-          *lehti-cache-directory*
-          *lehti-bin-directory*
-          *lehti-projects-repository-directory*
-          *lehti-bundle-file*
-          *projects-repository*)
+    ;; ** exports
+    (export *lehti-dist-directory*
+            *lehti-directory*
+            *lehti-cache-directory*
+            *lehti-bin-directory*
+            *lehti-projects-repository-directory*
+            *lehti-bundle-file*
+            *projects-repository*)
 
   ;; ** imports
-  (use srfi-98)
-  (use file.util)
-  (use gauche.parameter)
+  (import (scheme base)
+          (srfi-98)
+          (file util)
+          (gauche parameter))
 
   ;; ** code
   (begin

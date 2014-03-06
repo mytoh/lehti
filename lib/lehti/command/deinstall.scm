@@ -1,13 +1,15 @@
 
-(define-module lehti.command.deinstall
-  (export
-    deinstall-package
-    deinstall)
-
-  (use file.util)
-  (use lehti.base)
-  (use lehti.util)
-  (use lehti.env)
+(define-library (lehti command deinstall)
+    (export
+      deinstall-package
+      deinstall)
+  (import (scheme base)
+          (scheme write)
+          (gauche base)
+          (file util)
+          (lehti base)
+          (lehti util)
+          (lehti env))
 
   (begin
 

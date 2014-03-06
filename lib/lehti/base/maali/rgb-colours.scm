@@ -2,13 +2,14 @@
 
 ;; -*- coding: utf-8 -*-
 
-(define-module lehti.base.maali.rgb-colours
-  (export
-    rgb-colours)
-  (use util.match)
-  (use util.list)
-  (use srfi-1)
-  (use srfi-13)
+ (define-library (lehti base maali rgb-colours)
+    (export
+      rgb-colours)
+  (import (scheme base)
+          (util match)
+          (util list)
+          (srfi-1)
+          (srfi-13))
 
   (begin
 

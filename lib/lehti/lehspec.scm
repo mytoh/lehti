@@ -1,16 +1,17 @@
 
-(define-module lehti.lehspec
-  (export
-    package->lehspec
-    spec
-    spec.name
-    spec.description
-    spec.homepage
-    spec.files
-    <lehspec>)
-  (use srfi-9)
-  (use file.util)
-  (use lehti.env)
+(define-library (lehti lehspec)
+    (export
+      package->lehspec
+      spec
+      spec.name
+      spec.description
+      spec.homepage
+      spec.files
+      <lehspec>)
+  (import (scheme base)
+          (srfi-9)
+          (file util)
+          (lehti env))
 
   (begin
 

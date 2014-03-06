@@ -1,7 +1,7 @@
-(define-module lehti.base
-  (export
-    paint)
+(define-library (lehti base)
+    (export
+      paint)
   ;; ** import
-  (use lehti.base.maali)
+  (import (lehti base maali))
 
   )
