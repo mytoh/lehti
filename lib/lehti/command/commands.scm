@@ -1,14 +1,15 @@
-(define-module lehti.command.commands
-  (export
-    commands)
+(define-library (lehti command commands)
+    (export
+      commands)
 
     ;;; imports
-  (use file.util)
-  (use lehti.env)
-  (use lehti.lehspec)
-  (use lehti.util)
-  (use lehti.scm)
-
+  (import (scheme base)
+          (gauche base)
+          (file util)
+          (lehti env)
+          (lehti lehspec)
+          (lehti util)
+          (lehti scm))
 
   (begin
 
