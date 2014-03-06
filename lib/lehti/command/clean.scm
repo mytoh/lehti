@@ -1,11 +1,10 @@
-(define-module lehti.command.clean
-
-  (export
-    clean)
-
-  ;; ** import
-  (use file.util)
-  (use lehti.env)
+(define-library (lehti command clean)
+    (export
+      clean)
+  (import (scheme base)
+          (scheme write)
+          (file util)
+          (lehti env))
 
   ;; ** code
   (begin
@@ -14,7 +13,10 @@
       (cond
         ((null? args)
          (for-each
-             remove-directory*
+             (lambda (d)
+               (remove-directory* d)
+               (display (string-append "clean " d))
+               (newline))
            (directory-list (*lehti-cache-directory*)
                            :children? #t :add-path? #t)))))
 
