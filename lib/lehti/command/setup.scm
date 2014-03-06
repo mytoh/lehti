@@ -1,14 +1,17 @@
-(define-module lehti.command.setup
-  (export
-    setup)
+(define-library (lehti command setup)
+    (export
+      setup)
   ;; ** import
-  (use srfi-1)
-  (use srfi-13)
-  (use file.util)
-  (use util.match)
-  (use lehti.base)
-  (use lehti.lehspec)
-  (use lehti.env)
+  (import (scheme base)
+          (scheme write)
+          (gauche base)
+          (srfi-1)
+          (srfi-13)
+          (file util)
+          (util match)
+          (lehti base)
+          (lehti lehspec)
+          (lehti env))
 
   (begin
 
@@ -42,8 +45,8 @@
 
     (define (setup args)
       (match args
-        (("load-path")
-         (display (list->path (make-load-path))))
-        ))
+             (("load-path")
+              (display (list->path (make-load-path))))
+             ))
 
     ))
