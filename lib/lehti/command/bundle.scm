@@ -1,13 +1,15 @@
-(define-module lehti.command.bundle
-  (export
-    bundle)
-;;; import
-  (use file.util)
-  (use lehti.env)
-  (use srfi-13)
-  (use util.match)
-  (use lehti.command.list)
-  (use lehti.command.install)
+(define-library (lehti command bundle)
+    (export
+      bundle)
+  (import (scheme base)
+          (scheme write)
+          (gauche base)
+          (file util)
+          (lehti env)
+          (srfi-13)
+          (util match)
+          (lehti command list)
+          (lehti command install))
 
 ;;; code
   (begin
@@ -20,12 +22,12 @@
     (define (do-command line)
       (let ((command (car line)))
         (match command
-          ("install"
-           (install-package (cadr line)))
-          ("list"
-           (list-packages line))
-          (else
-              (display "error")))))
+               ("install"
+                (install-package (cadr line)))
+               ("list"
+                (list-packages line))
+               (else
+                   (display "error")))))
 
     (define (bundle args)
       (let ((commands (read-bundle-file (*lehti-bundle-file*))))
