@@ -1,12 +1,14 @@
-(define-module lehti.command.specification
+(define-library (lehti command specification)
 
-  (export
-    specification)
+    (export
+      specification)
   ;; ** import
-  (use srfi-13)
-  (use lehti.lehspec)
-  (use lehti.env)
-  (use lehti.base)
+  (import (scheme base)
+          (gauche base)
+          (srfi-13)
+          (lehti lehspec)
+          (lehti env)
+          (lehti base))
 
   ;; ** code
   (begin
