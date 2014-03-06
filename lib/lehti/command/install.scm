@@ -22,7 +22,7 @@
         (cond
           ((url-is-git? url)
            (when (file-exists? package)
-             (delete-directory package))
+             (delete-directory* package))
            (run-process `(git clone -q ,url ,package) :wait #t))
           (else
               (print "not supported url")))))
@@ -45,8 +45,7 @@
          (current-directory (build-path (*lehti-cache-directory*)
                                         package))
          (let* ((cache-directory (build-path (*lehti-cache-directory*) package))
-                (lehspec (spec (cdar (file->sexp-list (build-path cache-directory
-                                                                  (path-swap-extension package "lehspec")))))))
+                (lehspec (get-package-spec package)))
            (install-lehspec-package-files lehspec)
            (make-executables package)
            (remove-directory* cache-directory)))
@@ -61,8 +60,7 @@
            (current-directory (build-path (*lehti-cache-directory*)
                                           package))
            (let* ((cache-directory (build-path (*lehti-cache-directory*) package))
-                  (lehspec (spec (cdar (file->sexp-list (build-path cache-directory
-                                                                    (path-swap-extension package "lehspec")))))))
+                  (lehspec (get-package-spec package)))
              (install-lehspec-package-files lehspec)
              (make-executables package)
              (remove-directory* cache-directory)))
@@ -102,6 +100,11 @@
                                           package "source.scm")))
         (error "project does not exist!")))
 
+    (define (get-package-spec package)
+      (let ((cache-directory (build-path (*lehti-cache-directory*) package)))
+        (spec (cdar (file->sexp-list
+                     (build-path cache-directory
+                                 (path-swap-extension package "lehspec")))))))
 
     (define (directory-exists-or . dirs)
       (if (null? dirs)
