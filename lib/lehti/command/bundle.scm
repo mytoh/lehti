@@ -6,7 +6,7 @@
           (gauche base)
           (file util)
           (lehti env)
-          (srfi-13)
+          (srfi 13)
           (util match)
           (lehti command list)
           (lehti command install))

@@ -16,8 +16,9 @@
     (define (commands args)
       (for-each
           (lambda (c)
-            (format #t "~a\n" c))
+            (format #true "~a\n" c))
         (map (lambda (path) (path-sans-extension path))
-          (directory-list (build-path (*lehti-directory* ) "lib/lehti/command") :children? #t))))
+          (directory-list (build-path (*lehti-directory* ) "lib/lehti/command")
+                          :children? #true))))
 
     ))

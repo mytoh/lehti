@@ -9,7 +9,7 @@
       spec.files
       <lehspec>)
   (import (scheme base)
-          (srfi-9)
+          (srfi 9)
           (file util)
           (lehti env))
 
@@ -31,8 +31,8 @@
       (let ((register (lambda (i e)
                         (if (assoc e  i)
                           (cadr (assoc e i))
-                          #f)))
-            (lehspec (make-spec #f #f #f #f)))
+                          #false)))
+            (lehspec (make-spec #false #false #false #false)))
         (set-spec.name lehspec (register infos 'name))
         (set-spec.files lehspec (register infos 'files))
         (set-spec.description lehspec (register infos 'description))

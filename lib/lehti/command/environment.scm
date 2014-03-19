@@ -3,7 +3,7 @@
   (import (scheme base)
           (scheme write)
           (gauche base)
-          (srfi-13)
+          (srfi 13)
           (file util)
           (lehti base)
           (lehti lehspec)
@@ -39,6 +39,8 @@
                      (build-path e "lib"))
                     (else
                         '())))
-              (directory-list (*lehti-dist-directory*) :children? #t :add-path? #t)))))
+              (directory-list (*lehti-dist-directory*)
+                              :children? #true
+                              :add-path? #true)))))
 
     ))

@@ -1,5 +1,3 @@
-
-
 ;; -*- coding: utf-8 -*-
 
  (define-library (lehti base maali rgb-colours)
@@ -8,12 +6,10 @@
   (import (scheme base)
           (util match)
           (util list)
-          (srfi-1)
-          (srfi-13))
+          (srfi 1)
+          (srfi 13))
 
   (begin
-
-
     (define rgb-colours
       '((snow (255 250 250))
         (white (248 248 255))

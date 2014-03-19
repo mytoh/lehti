@@ -1,4 +1,3 @@
-
 ;; -*- coding: utf-8 -*-
 
 (define-library (lehti base maali)
@@ -11,10 +10,8 @@
           (lehti base maali rgb-colours)
           (util match)
           (util list)
-          (srfi-1)
-          (srfi-13))
-
-
+          (srfi 1)
+          (srfi 13))
   (begin
 
     (define ansi-colours
@@ -140,7 +137,7 @@
              ((< cnt 6)
               (loop sep (+ cnt 1)))
              ((< 6 cnt)
-              #t))))
+              #true))))
 
     ;; make colour numbers functions
     (define (colour-rgb r g b)
@@ -208,7 +205,6 @@
       x)
 
     (define (unpaint s)
-      (regexp-replace-all* s #/\[((\d)+;)*(\d)+m/ "" ))
+      (regexp-replace-all* s #/\[((\d)+\;)*(\d)+m/ ""))
 
-
-                                    ))
+    ))

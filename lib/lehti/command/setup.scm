@@ -5,8 +5,8 @@
   (import (scheme base)
           (scheme write)
           (gauche base)
-          (srfi-1)
-          (srfi-13)
+          (srfi 1)
+          (srfi 13)
           (file util)
           (util match)
           (lehti base)
@@ -27,7 +27,9 @@
                      (build-path e "lib"))
                     (else
                         '())))
-             (directory-list (*lehti-dist-directory*) :children? #t :add-path? #t)))))
+             (directory-list (*lehti-dist-directory*)
+                             :children? #true
+                             :add-path? #true)))))
 
     (define (list->path lst)
       (cond

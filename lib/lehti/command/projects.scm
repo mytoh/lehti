@@ -4,7 +4,7 @@
       projects)
   (import (scheme base)
           (gauche base)
-          (srfi-1)
+          (srfi 1)
           (file util)
           (lehti env)
           (lehti base)
@@ -21,7 +21,8 @@
       (cond
         ((file-exists? (*lehti-projects-repository-directory*))
          (let ((lst (remove-dot-directory
-                     (directory-list2 (*lehti-projects-repository-directory*) :children? #t))))
+                     (directory-list2 (*lehti-projects-repository-directory*)
+                                      :children? #true))))
            (print (paint "lehti projects" 44))
            (for-each print lst)))))
 

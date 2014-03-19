@@ -3,12 +3,10 @@
 
 (import (scheme base)
         (scheme process-context)
-        (lehti cli)
-        )
+        (lehti cli))
 
 (define (main args)
   (run args))
-
 
 (main (command-line))
 

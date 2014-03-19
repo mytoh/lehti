@@ -13,10 +13,10 @@
     (define (list-packages args)
       (for-each
           (lambda (p)
-            (format #t "~a\n" p))
+            (format #true "~a\n" p))
         (map
             (lambda (path)
               (path-sans-extension path))
-          (directory-list (build-path (*lehti-directory* ) "dist") :children? #t))))
+          (directory-list (build-path (*lehti-directory* ) "dist") :children? #true))))
 
     ))

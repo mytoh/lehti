@@ -1,7 +1,7 @@
 
 (define-library (lehti env)
 
-    ;; ** exports
+    ;;; exports
     (export *lehti-dist-directory*
             *lehti-directory*
             *lehti-cache-directory*
@@ -10,13 +10,14 @@
             *lehti-bundle-file*
             *projects-repository*)
 
-  ;; ** imports
+  ;;; imports
   (import (scheme base)
-          (srfi-98)
+          (scheme process-context)
+          (srfi 98)
           (file util)
           (gauche parameter))
 
-  ;; ** code
+ ;;; code
   (begin
 
     (define *lehti-directory*

@@ -5,7 +5,7 @@
   ;; ** import
   (import (scheme base)
           (gauche base)
-          (srfi-13)
+          (srfi 13)
           (lehti lehspec)
           (lehti env)
           (lehti base))
@@ -16,7 +16,7 @@
     (define (specification args)
       (let* ((package (car args))
              (lehspec (package->lehspec package)))
-        (format #t "~a ~a\n~a ~a\n~a\n~a\n"
+        (format #true "~a ~a\n~a ~a\n~a\n~a\n"
                 (paint "name:" 39)
                 (spec.name lehspec)
                 (paint "description:" 29)

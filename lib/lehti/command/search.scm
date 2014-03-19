@@ -6,8 +6,8 @@
   (import (scheme base)
           (scheme write)
           (gauche base)
-          (srfi-1)
-          (srfi-13)
+          (srfi 1)
+          (srfi 13)
           (file util)
           (util match)
           (lehti env)
@@ -39,7 +39,7 @@
            (display package)
            (newline))
           (else
-              (format #t "~a not found!" package)
+              (format #true "~a not found!" package)
             (newline)))))
 
     (define (search args)
