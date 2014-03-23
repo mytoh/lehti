@@ -25,5 +25,4 @@
       (display x)
       (newline))
 
-
     ))

@@ -12,7 +12,6 @@
           (lehti util)
           (lehti env))
   (begin
-
     (define (deinstall args)
       (call-with-packages
        args

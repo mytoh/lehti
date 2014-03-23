@@ -1,6 +1,6 @@
 ;; -*- coding: utf-8 -*-
 
-(define-library (lehti base maali)
+ (define-library (lehti base maali)
     (export
       paint
       unpaint
