@@ -9,7 +9,6 @@
       spec.files
       <lehspec>)
   (import (scheme base)
-          (srfi 9)
           (file util)
           (lehti env))
 
