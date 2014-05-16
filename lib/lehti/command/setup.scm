@@ -1,3 +1,4 @@
+
 (define-library (lehti command setup)
     (export
       setup)
@@ -43,12 +44,13 @@
         ((= (length lst) 1)
          (car lst))
         (else
-            (string-join lst ":"))))
+            (string-join lst " "))))
 
     (define (setup args)
       (match args
              (("load-path")
               (display (list->path (make-load-path))))
-             ))
+             (("load-path" "fish")
+              (display (list->path (make-load-path))))))
 
     ))
