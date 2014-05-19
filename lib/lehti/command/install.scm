@@ -88,7 +88,7 @@
             (update-projects-repository))))
 
     (define (update-projects-repository)
-      (run-process '(git pull) :wait #t :directory (*lehti-projects-repository-directory*)))
+      (run-process `(git -C ,(*lehti-projects-repository-directory*) pull) :wait #t))
 
     (define (project-exists? package)
       (member package (directory-list2 (*lehti-projects-repository-directory*) :children? #t)))
