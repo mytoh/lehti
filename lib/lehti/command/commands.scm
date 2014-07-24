@@ -4,6 +4,8 @@
 
     ;;; imports
   (import (scheme base)
+          (scheme write)
+          (srfi 29)
           (gauche)
           (file util)
           (lehti env)
@@ -16,7 +18,7 @@
     (define (commands args)
       (for-each
           (lambda (c)
-            (format #true "~a\n" c))
+            (display (format "~a\n" c)))
         (map (lambda (path) (path-sans-extension path))
           (directory-list (build-path (*lehti-directory* ) "lib/lehti/command")
                           :children? #true))))
