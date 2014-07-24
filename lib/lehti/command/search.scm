@@ -8,6 +8,7 @@
           (gauche)
           (srfi 1)
           (srfi 13)
+          (srfi 29)
           (file util)
           (util match)
           (lehti env)
@@ -39,7 +40,7 @@
            (display package)
            (newline))
           (else
-              (format #true "~a not found!" package)
+              (display (format "~a not found!" package))
             (newline)))))
 
     (define (search args)
