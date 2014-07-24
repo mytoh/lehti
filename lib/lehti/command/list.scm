@@ -2,6 +2,8 @@
 (define-library (lehti command list)
     (export list-packages)
   (import (scheme base)
+          (scheme write)
+          (srfi 29)
           (gauche)
           (file util)
           (lehti base)
@@ -13,7 +15,7 @@
     (define (list-packages args)
       (for-each
           (lambda (p)
-            (format #true "~a\n" p))
+            (display (format "~a\n" p)))
         (map
             (lambda (path)
               (path-sans-extension path))
