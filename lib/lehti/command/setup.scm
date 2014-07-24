@@ -5,7 +5,8 @@
   ;; ** import
   (import (scheme base)
           (scheme write)
-          (gauche base)
+          (scheme file)
+          (gauche)
           (srfi 1)
           (srfi 13)
           (file util)

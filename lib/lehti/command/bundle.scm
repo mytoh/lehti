@@ -3,7 +3,7 @@
       bundle)
   (import (scheme base)
           (scheme write)
-          (gauche base)
+          (gauche)
           (file util)
           (lehti env)
           (srfi 13)

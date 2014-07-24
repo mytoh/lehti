@@ -6,7 +6,7 @@
       unpaint
       pa)
   (import (scheme base)
-          (gauche base)
+          (gauche)
           (lehti base maali rgb-colours)
           (util match)
           (util list)

@@ -4,7 +4,7 @@
 
     ;;; imports
   (import (scheme base)
-          (gauche base)
+          (gauche)
           (file util)
           (lehti env)
           (lehti lehspec)

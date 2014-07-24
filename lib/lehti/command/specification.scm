@@ -4,7 +4,7 @@
       specification)
   ;; ** import
   (import (scheme base)
-          (gauche base)
+          (gauche)
           (srfi 13)
           (lehti lehspec)
           (lehti env)

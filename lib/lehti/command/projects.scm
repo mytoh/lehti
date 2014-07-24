@@ -3,7 +3,7 @@
     (export
       projects)
   (import (scheme base)
-          (gauche base)
+          (gauche)
           (srfi 1)
           (file util)
           (lehti env)

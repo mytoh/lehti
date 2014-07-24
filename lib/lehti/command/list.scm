@@ -2,7 +2,7 @@
 (define-library (lehti command list)
     (export list-packages)
   (import (scheme base)
-          (gauche base)
+          (gauche)
           (file util)
           (lehti base)
           (lehti lehspec)

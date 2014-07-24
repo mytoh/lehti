@@ -5,7 +5,7 @@
       search)
   (import (scheme base)
           (scheme write)
-          (gauche base)
+          (gauche)
           (srfi 1)
           (srfi 13)
           (file util)
