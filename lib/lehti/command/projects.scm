@@ -3,6 +3,7 @@
     (export
       projects)
   (import (scheme base)
+          (scheme file)
           (gauche)
           (srfi 1)
           (file util)

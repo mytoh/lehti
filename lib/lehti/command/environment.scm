@@ -2,6 +2,7 @@
     (export environment)
   (import (scheme base)
           (scheme write)
+          (scheme file)
           (gauche)
           (srfi 13)
           (file util)

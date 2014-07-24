@@ -1,9 +1,10 @@
 
- (define-library (lehti command install)
+(define-library (lehti command install)
     (export install
             install-package)
   (import (scheme base)
           (scheme write)
+          (scheme file)
           (gauche)
           (file util)
           (gauche process)
