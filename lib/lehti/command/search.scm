@@ -5,6 +5,7 @@
       search)
   (import (scheme base)
           (scheme write)
+          (scheme file)
           (gauche)
           (srfi 1)
           (srfi 13)
