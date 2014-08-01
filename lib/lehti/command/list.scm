@@ -4,7 +4,7 @@
   (import (scheme base)
           (scheme write)
           (srfi 29)
-          (gauche)
+          (gauche base)
           (file util)
           (lehti base)
           (lehti lehspec)

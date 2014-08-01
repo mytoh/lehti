@@ -6,7 +6,7 @@
   (import (scheme base)
           (scheme write)
           (scheme file)
-          (gauche)
+          (gauche base)
           (file util)
           (lehti base)
           (lehti util)

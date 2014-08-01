@@ -4,7 +4,7 @@
       projects)
   (import (scheme base)
           (scheme file)
-          (gauche)
+          (gauche base)
           (srfi 1)
           (file util)
           (lehti env)

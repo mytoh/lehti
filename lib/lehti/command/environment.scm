@@ -3,7 +3,7 @@
   (import (scheme base)
           (scheme write)
           (scheme file)
-          (gauche)
+          (gauche base)
           (srfi 13)
           (file util)
           (lehti base)

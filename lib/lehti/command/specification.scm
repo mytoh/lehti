@@ -5,7 +5,7 @@
   ;; ** import
   (import (scheme base)
           (scheme write)
-          (gauche)
+          (gauche base)
           (srfi 13)
           (srfi 29)
           (lehti lehspec)

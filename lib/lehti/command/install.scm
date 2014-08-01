@@ -1,11 +1,11 @@
 
-(define-library (lehti command install)
+ (define-library (lehti command install)
     (export install
             install-package)
   (import (scheme base)
           (scheme write)
           (scheme file)
-          (gauche)
+          (gauche base)
           (file util)
           (gauche process)
           (lehti env)
@@ -74,7 +74,7 @@
         (for-each
             (lambda (file)
               (cond
-                ((file-is-directory? file)
+                ((file-exists? file)
                  (make-directory* (build-path (*lehti-dist-directory*) package-name file)))
                 (else
                     (make-directory* (build-path (*lehti-dist-directory*) package-name (sys-dirname file)))
